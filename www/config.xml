@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.egym" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>É-GYM</name>
+    <description>É-GYM v1.0</description>
+    <author email="support@phonegap.com" href="http://phonegap.com">É-GYM Team</author>
+    <content src="index.html" />
+    <preference name="orientation" value="default" />
+	<preference name="android-build-tool" value="gradle" /> 
+    <gap:plugin name="cordova-plugin-admobpro" source="npm" /> 
+    <preference name="permissions" value="none" />
+    <preference name="target-device" value="universal" />
+    <preference name="fullscreen" value="true" />
+    <preference name="webviewbounce" value="true" />
+    <preference name="prerendered-icon" value="true" />
+    <preference name="stay-in-webview" value="false" />
+    <preference name="ios-statusbarstyle" value="black-opaque" />
+    <preference name="detect-data-types" value="true" />
+    <preference name="exit-on-suspend" value="false" />
+    <preference name="show-splash-screen-spinner" value="true" />
+    <preference name="auto-hide-splash-screen" value="true" />
+    <preference name="disable-cursor" value="false" />
+    <preference name="android-minSdkVersion" value="15" />
+    <preference name="android-targetSdkVersion" value="15" />
+    <preference name="android-installLocation" value="auto" />
+    <preference name="SplashScreenDelay" value="3000" />
+    <preference name="SplashScreen" value="splash" />
+    <preference name="SplashMaintainAspectRatio" value="true" />
+    <preference name="SplashShowOnlyFirstTime" value="true" />
+    <preference name="android-build-tool" value="gradle" />
+    <gap:plugin name="org.apache.cordova.battery-status" />
+    <gap:plugin name="org.apache.cordova.camera" />
+    <gap:plugin name="org.apache.cordova.media-capture" />
+    <gap:plugin name="org.apache.cordova.console" />
+    <gap:plugin name="org.apache.cordova.contacts" />
+    <gap:plugin name="org.apache.cordova.device" />
+    <gap:plugin name="org.apache.cordova.device-motion" />
+    <gap:plugin name="org.apache.cordova.device-orientation" />
+    <gap:plugin name="org.apache.cordova.dialogs" />
+    <gap:plugin name="org.apache.cordova.file" />
+    <gap:plugin name="org.apache.cordova.file-transfer" />
+    <gap:plugin name="org.apache.cordova.geolocation" />
+    <gap:plugin name="org.apache.cordova.globalization" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" />
+    <gap:plugin name="org.apache.cordova.media" />
+    <gap:plugin name="org.apache.cordova.network-information" />
+    <gap:plugin name="org.apache.cordova.splashscreen" />
+    <gap:plugin name="org.apache.cordova.vibration" />
+    <gap:plugin name="phonegap-plugin-barcodescanner" source="npm" />
+    <gap:plugin name="manateeworks-barcodescanner" source="npm" />
+    <icon src="icon.png" />
+    <platform name="browser">
+        <preference name="SplashScreen" value="icon.png" />
+        <preference name="SplashScreenDelay" value="2000" />
+        <preference name="SplashShowOnlyFirstTime" value="true" />
+        <preference name="SplashScreenBackgroundColor" value="#000000" />
+        <preference name="ShowSplashScreen" value="true" />
+    </platform>
+    <platform name="android">
+        <allow-intent href="market:*" />
+        <icon density="ldpi" src="res/android/ldpi.png" />
+        <icon density="mdpi" src="res/android/mdpi.png" />
+        <icon density="hdpi" src="res/android/hdpi.png" />
+        <icon density="xhdpi" src="res/android/xhdpi.png" />
+        <icon density="xxhdpi" src="res/android/xxhdpi.png" />
+        <splash density="land-hdpi" qualifier="land-hdpi" src="res/screen/android/screen-land-hdpi.png" />
+        <splash density="land-ldpi" qualifier="land-ldpi" src="res/screen/android/screen-land-ldpi.png" />
+        <splash density="land-mdpi" qualifier="land-mdpi" src="res/screen/android/screen-land-mdpi.png" />
+        <splash density="land-xhdpi" qualifier="land-xhdpi" src="res/screen/android/screen-land-xhdpi.png" />
+        <splash density="land-xxhdpi" qualifier="land-xxhdpi" src="res/screen/android/screen-land-xxhdpi.png" />
+        <splash density="port-hdpi" qualifier="port-hdpi" src="res/screen/android/screen-port-hdpi.png" />
+        <splash density="port-ldpi" qualifier="port-ldpi" src="res/screen/android/screen-port-ldpi.png" />
+        <splash density="port-mdpi" qualifier="port-mdpi" src="res/screen/android/screen-port-mdpi.png" />
+        <splash density="port-xhdpi" qualifier="port-xhdpi" src="res/screen/android/screen-port-xhdpi.png" />
+        <splash density="port-xxhdpi" qualifier="port-xxhdpi" src="res/screen/android/screen-port-xxhdpi.png" />
+    </platform>
+    <access origin="*" />
+    <plugin name="cordova-plugin-whitelist" version="1" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" /> 
+    <allow-intent href="mailto:*" /> 
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+    <plugin name="cordova-plugin-facebook4"  source="npm">
+        <param name="APP_ID" value="900945193337430" />
+        <param name="APP_NAME" value="E-GYM" />
+    </plugin>
+</widget>

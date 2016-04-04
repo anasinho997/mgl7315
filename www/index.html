@@ -1,0 +1,96 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head> 
+ 
+<title>Index - É-GYM</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1" media="(device-height: 568px)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="HandheldFriendly" content="True">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<!-- Style Sheets --> 
+<link rel="stylesheet" type="text/css" media="all" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/trunk.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/listView.css" />
+<link rel="stylesheet" type="text/css" media="all" href="lib/font-awesome-4.5.0/css/font-awesome.css" />
+<link rel="stylesheet" type="text/css" media="all" href="lib/font-awesome-4.5.0/css/font-awesome.min.css" /> 
+
+
+
+</head> 
+ 
+<body> 
+
+<div class="container">
+
+	<header class="slide">     <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+		<ul id="navToggle" class="burger slide">    <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+			<li></li><li></li><li></li>
+		</ul>
+		 
+			<img src="img/iconNoText.png" height="100%" class="imgLogo" />
+		 
+	</header>
+	 
+	<nav class="slide">
+		<ul>
+		
+			<li><a href="editProfil.html"> <i class="fa fa-user fa-fw fa-3x"></i>My Profil</a></li>
+			<li><a href="index.html"> <img src="img/icons/iconn.png" class="fa fa-fw fa-2x" /> Machines</a></li>
+			<li><a href="javascript:scanQRCode()"><i class="fa fa-qrcode fa-fw fa-3x"></i> Scan QR-Code</a></li>
+			<li><a href="#" onclick="window.open('mailto:egym@etsmtl.ca', '_system');"> <i class="fa fa-envelope fa-fw fa-3x"></i> Contact us</a></li>
+			<li><a href="#" onclick="window.open('https://www.facebook.com/%C3%89-GYM-979428002148538', '_system');"><i class="fa fa-facebook-official fa-fw fa-3x"></i> Like us</a></li>
+			 
+		</ul>
+	</nav> 
+	<div class="content slide">      
+		<ul class="responsive">
+			 
+			<li class="body-section" >
+				<ul class="rig columns-2" id="machines-list-master">
+				  
+				</ul>
+				
+				<div id="divListIndex" align="center" width="100%">
+				 
+				  
+				</div>
+			</li>
+		</ul>
+	</div>
+	
+</div>
+
+<!-- Scripts --> 
+ <script type="text/javascript" src="//connect.facebook.net/en_US/sdk.js"></script>
+		<script type="text/javascript">
+			if (typeof jQuery == 'undefined'){
+				document.write(unescape("%3Cscript src='lib/jquery/jquery-1.9.js'" + 
+																	"type='text/javascript'%3E%3C/script%3E"))
+											}
+		</script>
+		<script type="text/javascript" language="javascript" src="js/trunk.js"></script>
+		<script type="text/javascript" src="js/model.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+		 
+        <script type="text/javascript">
+            app.initialize();
+			 
+			checkProfil();
+			loadMachines();
+			loadList('divListIndex');
+			//window.location.replace("machineDetail.html?id=A-305");	
+        </script>
+	
+    </body>
+</html>
+
+
+
+
+
+
+
