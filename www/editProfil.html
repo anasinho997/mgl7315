@@ -12,7 +12,6 @@
 
 <!-- Style Sheets --> 
 <link rel="stylesheet" type="text/css" media="all" href="css/reset.css" />
-<link rel="stylesheet" type="text/css" media="all" href="css/trunk.css" />
 
 <link rel="stylesheet" type="text/css" media="all" href="css/trunk.css" />
 <link rel="stylesheet" type="text/css" media="all" href="css/listView.css" />
@@ -38,47 +37,48 @@
 		 
 	</header>
 	 
-	<nav class="slide">
-		<ul>
-		
-			<li><a href="editProfil.html"> <i class="fa fa-user fa-fw fa-3x"></i>My Profil</a></li>
-			<li><a href="index.html"> <img src="img/icons/iconn.png" class="fa fa-fw fa-2x" /> Machines</a></li>
-			<li><a href="javascript:scanQRCode()"><i class="fa fa-qrcode fa-fw fa-3x"></i> Scan QR-Code</a></li>
-			<li><a href="#" onclick="window.open('mailto:egym@etsmtl.ca', '_system');"> <i class="fa fa-envelope fa-fw fa-3x"></i> Contact us</a></li>
-			<li><a href="#" onclick="window.open('https://www.facebook.com/%C3%89-GYM-979428002148538', '_system');"><i class="fa fa-facebook-official fa-fw fa-3x"></i> Like us</a></li>
-			 
-		</ul>
-	</nav>
+		<nav class="slide">
+			<ul>
+			
+				<li><a href="editProfil.html"> <i class="fa fa-user fa-fw fa-3x"></i>My Profil</a></li>
+				<li><a href="index.html"> <img src="img/icons/iconn.png" class="fa fa-fw fa-2x" /> Machines</a></li>
+				<li><a href="javascript:scanQRCode()"><i class="fa fa-qrcode fa-fw fa-3x"></i> Scan QR-Code</a></li>
+				<li><a href="#" onclick="window.open('mailto:egym@etsmtl.ca', '_system');"> <i class="fa fa-envelope fa-fw fa-3x"></i> Contact us</a></li>
+				<li><a href="#" onclick="window.open('https://www.facebook.com/%C3%89-GYM-979428002148538', '_system');"><i class="fa fa-facebook-official fa-fw fa-3x"></i> Like us</a></li>
+				 
+			</ul>
+		</nav>
+	 
 	<div class="content slide">      
 		<ul class="responsive">
 			 
-			<li class="body-section">
-				 <div class="containerForm">
+			<li id="body-sectionProfil" class="body-section">
+				 <div class="containerForm" >
 					<section id="content">
-						<form action="" id='myform'>
-						<div class="info" id="facebook-login">
-							<i class="fa fa-facebook-square fa-2x"></i> <span> Login with FB</span>
+					<div class="info" id="facebook-login">
+							<h2><i class="fa fa-facebook-square fa-3x"></i> <span> Login with FB</span></h2>
 						</div>
 						<div class="info" id="facebook-data" style="display:none">
-							<i class="fa fa-facebook-square fa-2x"></i> <span id="facebook-logout">Logout</span><br><br><img id="facebook-picture"/>  
+							<h2><i class="fa fa-facebook-square fa-4x"></i> <span id="facebook-logout"> Logout</span><br><br><img id="facebook-picture"/>  </h2>
 						</div>
-							
+						<form action="" id='myform'>						
 								<div align="center">
 								 
 								<div align="center">
 									 
-									<img id="fbPic" /><br/>
+									<img id="fbPic" src="img/icons/defaultProfil.jpg" /><br/><br/>
 									<input type="radio" name="opinions" id="radio-1"  value="male" checked="checked" /><img src="img/icons/male.png" />
 									<input type="radio" name="opinions" id="radio-2"  value="female" /><img src="img/icons/female.png" />	 			 
+									<br/><br/>
 								</div>
 								<div align="center">
 									<input type="text" placeholder="First name" required="" id="firstName" />
 								</div>
 								<div align="center">
-									<input type="text" placeholder="Last name" required="" id="lastName" />
+									<input type="text" placeholder="Last name"  required="" id="lastName" />
 								</div>
 								<div align="center">
-									<input type="date" id="birthday" min="1970-12-31" max="1999-12-31" value="1999-12-31" />
+									<input type="date" id="birthday" min="1920-12-31" max="1999-12-31" value="1999-12-31" />
 								</div>
 								<div align="center">
 									<input placeholder="Weight" type="text"  required="" id="weightPoid" disabled />
@@ -101,7 +101,7 @@
 					</div>
 								
 						</form> 
-					</section>  
+					</section>  				
 				</div>    
 				
 			</li>

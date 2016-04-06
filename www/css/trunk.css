@@ -2,7 +2,10 @@ a {
   color:inherit;
   text-decoration: none;
  }
-
+.info{
+	padding: 15px; 
+	margin: 13px 15px 0px; 
+}
 .myButton {
   -webkit-border-radius: 10;
   -moz-border-radius: 10;
@@ -21,7 +24,7 @@ a {
   background: #3cb0fd;
   text-decoration: none;
 }
-#content form { margin: 0 0%; position: relative }
+#content form { margin: 0 0%; position: relative;}
 #content form input[type="text"],
 #content form input[type="password"] {
 	-webkit-border-radius: 3px;
@@ -44,7 +47,7 @@ a {
 	font: 13px Helvetica, Arial, sans-serif;
 	margin: 0 0 10px;
 	padding: 15px 10px 15px 40px;
-	width: 80%;
+	width: 80%; 
 	max-width: 450px;
 }
 
@@ -150,12 +153,12 @@ a {
 }
 
 
-#firstName { background: #eae7e7 url(../img/icons/icons.png) no-repeat; background-position: 10px 10px !important }
-#lastName { background: #eae7e7 url(../img/icons/icons.png) no-repeat; background-position: 10px 10px !important }
+#firstName { background: #fff url(../img/icons/icons.png) no-repeat; background-position: 10px 10px !important }
+#lastName { background: #fff url(../img/icons/icons.png) no-repeat; background-position: 10px 10px !important }
 #password { background: #eae7e7 url(../img/icons/icons.png) no-repeat; background-position: 10px -53px !important }
 #confirm_password { background: #eae7e7 url(../img/icons/icons.png) no-repeat;  background-position: 10px -53px !important }
 #weightPoid { background: #eae7e7 url(../img/icons/icoNumber.png) no-repeat; background-position: 10px 5px !important }
-#birthday { background: #eae7e7 url(../img/icons/birthday.png) no-repeat; background-position: 10px 10px !important }
+#birthday { background: #fff url(../img/icons/birthday.png) no-repeat; background-position: 10px 10px !important }
 #HeightTaille { background: #eae7e7 url(../img/icons/icoNumber.png) no-repeat; background-position: 10px -53px !important } 
 
  
@@ -252,6 +255,7 @@ body {
 	-ms-tap-highlight-color:rgba(0,0,0,0); 
 	-ms-text-size-adjust: none;
 	-ms-font-smoothing: antialiased;
+	
 }
 a {text-decoration: none;}
 
@@ -327,7 +331,9 @@ nav li a:hover {color: #fff;}
 .header-section,
 .body-section,
 .footer-section 
-{padding-top: 50px; /*padding-bottom: 100%;*/}
+{padding-top: 50px;}
+#body-sectionProfil 
+{padding-top: 50px; padding-bottom: 100%;}
 
 .header-section {background-color: #f4f5f6;}
 .body-section {background-color: #f4f5f6;}
@@ -396,6 +402,7 @@ display: block;
 
 }
 
+ 
 
 @media only screen and (max-width: 780px) {
  
@@ -426,7 +433,7 @@ display: none;
 		padding: 15px ; 
 		margin: 13px 15px 0px;
 		height: 100%;
-		width: 100%;
+		
 	}
 
 	

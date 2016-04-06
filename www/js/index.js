@@ -199,7 +199,18 @@ function scanQRCode(){
                 "Result: " + result.text + "\n" +
                 "Format: " + result.format + "\n" +
                 "Cancelled: " + result.cancelled);*/
-		window.location.replace("machineDetail.html?id="+result.text);
+		if(result.cancelled){
+			window.location.replace("index.html");
+		}
+		else{
+			if(result.text.indexOf("-") > -1){
+			window.location.replace("machineDetail.html?id="+result.text);
+			}
+			else{
+				alert("QR code not recognized")
+			}
+		}
+		
       }, 
       function (error) {
           alert("Scanning failed: " + error);
@@ -286,7 +297,8 @@ function populateFB() {
 	//Fetch the name
 	facebookConnectPlugin.api("/me", ["public_profile"], function(data){
 		$('#facebook-name').html(data.name);
-		$('#firstName').val(data.name);
+		$('#firstName').val(data.name+data.last_name);
+		$('#lastName').val(data.name.charAt(' '));
 		//Fetch the picture
 		facebookConnectPlugin.api("/me/picture?redirect=false", ["public_profile"], function(ret){
 			 

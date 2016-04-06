@@ -11,11 +11,7 @@
   width: 80%;
   max-width: 450px;
 }
- 
-.myButton:hover {
-  background: #3cb0fd;
-  text-decoration: none;
-}
+
 
 
 .burger {
@@ -46,7 +42,7 @@ body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-      
+     
 	background-color: #f4f5f6;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
     font-size:12px;
@@ -359,5 +355,6 @@ form:after {
     font-size: 12px;
     margin: 30px 15px 0 0;
     text-decoration: underline;
+	 
 }  
  
