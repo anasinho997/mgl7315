@@ -46,7 +46,6 @@
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" />
     <gap:plugin name="phonegap-plugin-barcodescanner" source="npm" />
-    <gap:plugin name="manateeworks-barcodescanner" source="npm" />
     <icon src="icon.png" />
     <platform name="browser">
         <preference name="SplashScreen" value="icon.png" />

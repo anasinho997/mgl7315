@@ -202,14 +202,13 @@ function scanQRCode(){
 		if(result.cancelled){
 			window.location.replace("index.html");
 		}
-		else{
-			if(result.text.indexOf("-") > -1){
+		if(result.text.indexOf("-") > -1){
 			window.location.replace("machineDetail.html?id="+result.text);
 			}
-			else{
+		if(result.text.indexOf("-") < -1){
 				alert("QR code not recognized")
 			}
-		}
+		
 		
       }, 
       function (error) {
@@ -272,6 +271,7 @@ function initFB(){
 		facebookConnectPlugin.logout(function() {
 			$('#facebook-data').hide();
 			$('#facebook-login').show();
+			$('#fbPic').attr('src', "img/icons/defaultProfil.jpg");
 		}, function(msg){
 			alert(msg);
 		});
@@ -297,8 +297,8 @@ function populateFB() {
 	//Fetch the name
 	facebookConnectPlugin.api("/me", ["public_profile"], function(data){
 		$('#facebook-name').html(data.name);
-		$('#firstName').val(data.name+data.last_name);
-		$('#lastName').val(data.name.charAt(' '));
+		$('#firstName').val(data.name.substr(0,data.name.indexOf(" ")));
+		$('#lastName').val(data.name.substr(data.name.indexOf(" ")));
 		//Fetch the picture
 		facebookConnectPlugin.api("/me/picture?redirect=false", ["public_profile"], function(ret){
 			 
