@@ -70,9 +70,7 @@ var app = {
 		
 		//Hook a swipe left to come back from the list detail
 	$("#divList").swipe( {    
-		swipeLeft:function(event, direction, distance, duration, fingerCount, fingerData) {
-		 window.location.hash = 'machine-master';
-		},
+		
 		swipeRight:function(event, direction, distance, duration, fingerCount, fingerData) {
 		 window.location.hash = 'divList';
 		}
@@ -287,7 +285,42 @@ function loadList(name){
 	$('#'+name).html(stringLi);
 	var myParam = location.search.split('?id=')[1];
 	//colorer le Li selectionne dans le mode tablette 
-	document.getElementsByName("divListli"+myParam)[0].style.border = "medium solid #FF0000";
+	try{
+		document.getElementsByName("divListli"+myParam)[0].style.border = "medium solid #FF0000";
+	}
+	catch(err) {
+      
+	 }
+}
+
+function loadListProgramme(nameProgramme){
+	
+	var programsID = Object.keys(programs);
+	var stringLi='<ul id="divListul">';
+	for(var i in programsID) {
+		 
+		var programsID = programsID[i];
+		var progT = programs[programsID];
+		stringLi=stringLi+('<li class="divListli" id="divListli" name="divListli' + progT.id + '"><a href="machineDetail.html?id='+progT.id+'"><img id="divListimg" src="img/prgrams/100/' + progT.id + '.png" /><h3 id="divListh3" align="left">Code : '+ progT.id + '<br/>goal: ' + progT.goal +'</h3><p id="divListp"  align="left">Duration: ' + progT.duration + '</p></a></li><hr id="myHR" />');		
+		
+	} 
+	stringLi=stringLi+'</ul>';
+	$('#'+nameProgramme).html(stringLi);
+	var myParam = location.search.split('?id=')[1];
+	//colorer le Li selectionne dans le mode tablette  
+	try{
+		document.getElementsByName("divListli"+myParam)[0].style.border = "medium solid #FF0000";
+	}
+	catch(err) {
+      
+	 }
+}
+
+function loadProgsInfos(){
+	// to change id p1
+	var myParam = location.search.split('?id=')[1];
+	$('#programme-master').html(programs['p1'].description);
+	
 }
 
 
@@ -351,3 +384,4 @@ function populateFB() {
 function goToProgramme(){
 		window.location.hash = "programmelist";
 }
+

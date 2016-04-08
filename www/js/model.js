@@ -49,9 +49,23 @@ var machines = {
 		'smallDesc': 'Converging Shoulder Press',
 		'desc': '<table style="width:100%" border="0" class="tableDetail" > <tr> <td colspan = "2" > <img src="img/machines/T/E-449.png" class="machineDetail" /> </td>   </tr><tr><td colspan = "2" valign="top" id="cssTable"><h3>ID: <span id="muscleAndDiff">E-449, Converging Shoulder Press</span><br/>Muscle: <span id="muscleAndDiff">Shoulders</span><br/><span id="muscleAndDiff"><br><hr> Instructions: </span><br><br> 1. Adjust the seat height so that the handles are at shoulder height. <br> 2. Select an appropriate weight for the exercise.<br/> 3. Take hold of the handles with both hands, take a deep breath in and whilst exhaling extend the arms upwards.<br/> 4. Pause briefly at the top of the movement and lower back to the start position whilst inhaling.<br/> 5. Repeat for the desired number of repetitions. </td></tr> <tr> <td colspan = "2"><div class="video-container"><iframe  src="https://www.youtube.com/embed/B0A7npqXZoY" frameborder="0" allowfullscreen></iframe></div></td>    </tr></table> '
 	}
+};
+
+var programs ={
+	'p1' :{
+		'id':'p1',
+		'name':'Dry and weight Loss',
+		'goal': 'Alternate muscle and cardio workout to gradually reduce body fat without muscle wasting to get a super dry and muscular physique .',
+        'lvl': 'Beginner',
+        'duration': '40 min',
+      
+		'description': '<table style="width:100%"  border="1"><tr><h2>Dry and weight Loss<h2></tr><tr><h3>Goal :</h3><br/><p>Alternate muscle and cardio workout to gradually reduce body fat without muscle wasting to get a super dry and muscular physique .</p></tr> <tr><h3>duration:</h3> 4 weeks</tr><tr><h3>skill level:</h3>Beginner</tr></table>'
+
+		
+	}
+	
+		
 }
-
-
 
 
 	
