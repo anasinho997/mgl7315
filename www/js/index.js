@@ -37,7 +37,7 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() { 
 		app.receivedEvent('deviceready'); 
-		 
+		window.location.hash == "indexMachineList";
         if (window.cordova.platformId == "browser") {
 			facebookConnectPlugin.browserInit('900945193337430', 'v2.5', function(){
 				initFB();
@@ -45,6 +45,40 @@ var app = {
 		} else {
 			initFB();
 		} 
+		$('#indexList').show();
+		$('#programmeListDiv').hide();
+		window.onhashchange = function() {
+			if(window.location.hash == '#programmelist') {
+				
+			$('#indexList').hide();
+			$('#programmeListDiv').show();
+			
+			}
+			else if(window.location.hash == '#index') {
+				
+			$('#indexList').show();
+			$('#programmeListDiv').hide();
+			
+			}
+			else if(window.location.hash == '#hello') {
+			alert();
+			
+			}
+			
+			
+		}
+		
+		//Hook a swipe left to come back from the list detail
+	$("#divList").swipe( {    
+		swipeLeft:function(event, direction, distance, duration, fingerCount, fingerData) {
+		 window.location.hash = 'machine-master';
+		},
+		swipeRight:function(event, direction, distance, duration, fingerCount, fingerData) {
+		 window.location.hash = 'divList';
+		}
+		
+	});
+
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -205,7 +239,7 @@ function scanQRCode(){
 		if(result.text.indexOf("-") > -1){
 			window.location.replace("machineDetail.html?id="+result.text);
 			}
-		if(result.text.indexOf("-") < -1){
+		if(!(result.text.indexOf("-") > -1)){
 				alert("QR code not recognized")
 			}
 		
@@ -313,4 +347,7 @@ function populateFB() {
 	});
 
 }
- 
+
+function goToProgramme(){
+		window.location.hash = "programmelist";
+}
