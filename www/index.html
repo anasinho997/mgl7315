@@ -29,8 +29,8 @@
 
 <div class="container">
 
-	<header class="slide">     <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
-		<ul id="navToggle" class="burger slide">    <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+	<header class="slide" id="headerIndex">     
+		<ul id="navToggle" class="burger slide">     
 			<li></li><li></li><li></li>
 		</ul>
 		 
@@ -38,18 +38,19 @@
 		 
 	</header>
 	 
-	<nav class="slide">
+	<nav class="slide" id="slideIndex">
 		<ul>
 		
-			<li><a href="editProfil.html"> <i class="fa fa-user fa-fw fa-3x"></i>My Profil</a></li>
-			<li><a href="index.html"> <img src="img/icons/iconn.png" class="fa fa-fw fa-2x" /> Machines</a></li>
+			<li><a onclick="javascript:window.location.hash = 'profil';"> <i class="fa fa-user fa-fw fa-3x"></i>My Profil</a></li>
+			<li><a onclick="javascript:window.location.hash = 'index';"> <img src="img/icons/iconn.png" class="fa fa-fw fa-2x" /> Machines</a></li>
 			<li><a href="javascript:scanQRCode()"><i class="fa fa-qrcode fa-fw fa-3x"></i> Scan QR-Code</a></li>
-			<li><a href="javascript:goToProgramme()"><i class="fa fa-calendar-check-o fa-3x"></i></i> Programs</a></li>
+			<li><a onclick="javascript:window.location.hash = 'programmelist';"><i class="fa fa-calendar-check-o fa-3x"></i></i> Programs</a></li>
 			<li><a href="#" onclick="window.open('mailto:egym@etsmtl.ca', '_system');"> <i class="fa fa-envelope fa-fw fa-3x"></i> Contact us</a></li>
 			<li><a href="#" onclick="window.open('https://www.facebook.com/%C3%89-GYM-979428002148538', '_system');"><i class="fa fa-facebook-official fa-fw fa-3x"></i> Like us</a></li>
 			 
 		</ul>
 	</nav> 
+	 
 	<div class="content slide" id="indexList"  >      
 		<ul class="responsive">
 			 
@@ -65,10 +66,10 @@
 			</li>
 		</ul>
 	</div>
-	<div class="programme" id="programmeListDiv">
-		<ul class="responsive">
+	<div class="programme content slide" id="programmeListDiv">
+	 		<ul class="responsive">
 			 
-			<li class="body-section" >
+				<li class="body-section" id="body-sectionProg">
 					<table border="0" bgcolor="#f4f5f6">
 					<tr>
 						<td valign="top" width="30%" height="100%"  id="ProgrammehideDIV">
@@ -77,24 +78,71 @@
 							</div>								
 						</td>
 						<td width="70%" height="100%" valign="top">
-						<div class="content slide" >      
-							<ul class="responsive">
-								<li class="body-section">
-									 <div class="containerForm">
-										<div align="center" id="programme-master">
+						 	<div align="center" id="programme-master">
 														detail
-										</div>
-										 
-									</div> 
-								</li>		 
-							</ul>
-						</div>
-						
+							</div> 
 						</td>
 					</tr>
-				</table>
-			</li>
-		</ul>
+					</table>
+				</li>
+			</ul>
+	 
+	</div>
+	
+	 
+	<div class="profil content slide" id="profilDiv">
+			<ul class="responsive">
+				<li class="body-section" >
+					<div class="containerForm" >
+					<section id="content">
+						<div class="info" id="facebook-login">
+							<h2><i class="fa fa-facebook-square fa-3x"></i> <span> Login with FB</span></h2>
+						</div>
+						<div class="info" id="facebook-data" style="display:none">
+							<h2><i class="fa fa-facebook-square fa-4x"></i> <span id="facebook-logout"> Logout</span><br><br><img id="facebook-picture"/>  </h2>
+						</div>
+						<form action="" id='myform'>						
+								<div align="center">
+								 
+								<div align="center">
+									 
+									<img id="fbPic" src="img/icons/defaultProfil.jpg" /><br/><br/>
+									<input type="radio" name="opinions" id="radio-1"  value="male" checked="checked" /><img src="img/icons/male.png" />
+									<input type="radio" name="opinions" id="radio-2"  value="female" /><img src="img/icons/female.png" />	 			 
+									<br/><br/>
+								</div>
+								<div align="center">
+									<input type="text" placeholder="First name" required="" id="firstName" />
+								</div>
+								<div align="center">
+									<input type="text" placeholder="Last name"  required="" id="lastName" />
+								</div>
+								<div align="center">
+									<input type="date" id="birthday" min="1920-12-31" max="1999-12-31" value="1999-12-31" />
+								</div>
+								<div align="center">
+									<input placeholder="Weight" type="text"  required="" id="weightPoid" disabled />
+								</div>
+								<div align="center">
+									<input type='range' id='RangeWeight' class='tip' min="30" max="200" value='40' oninput="RangeOnChangeWeight()" onchange="RangeOnChangeWeight()">  
+								</div>
+								<div align="center">
+									<input placeholder="Height" type="text" required="" id="HeightTaille" disabled /> 
+								</div>
+								<div align="center">
+									<input type='range' id='RangeHeight' class='tip' min="100" max="230" value='40' oninput="RangeOnChangeHeight()" onchange="RangeOnChangeHeight()">  
+								</div> 
+									<div align="center">
+										<input type="submit" onclick="saveProfil()" class="myButton" value="Update" />
+									</div>
+									
+								</div>
+						</form> 
+						
+					</section>  
+					</div>
+				</li>
+			</ul> 
 	</div>
 </div>
 

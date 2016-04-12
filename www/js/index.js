@@ -47,25 +47,29 @@ var app = {
 		} 
 		$('#indexList').show();
 		$('#programmeListDiv').hide();
+		$('#profilDiv').hide();
+		
 		window.onhashchange = function() {
+			hideMenu();
 			if(window.location.hash == '#programmelist') {
 				
 			$('#indexList').hide();
 			$('#programmeListDiv').show();
-			
+			$('#profilDiv').hide();
 			}
 			else if(window.location.hash == '#index') {
 				
 			$('#indexList').show();
 			$('#programmeListDiv').hide();
+			$('#profilDiv').hide();
 			
 			}
-			else if(window.location.hash == '#hello') {
-			alert();
+			else if(window.location.hash == '#profil') {
+			$('#indexList').hide();
+			$('#programmeListDiv').hide();
+			$('#profilDiv').show();
 			
-			}
-			
-			
+			} 
 		}
 		
 		//Hook a swipe left to come back from the list detail
@@ -233,6 +237,7 @@ function scanQRCode(){
                 "Cancelled: " + result.cancelled);*/
 		if(result.cancelled){
 			window.location.replace("index.html");
+			
 		}
 		if(result.text.indexOf("-") > -1){
 			window.location.replace("machineDetail.html?id="+result.text);
@@ -257,7 +262,7 @@ function loadMachines(){
 		 
 		var machineID = machinesID[i];
 		var machineT = machines[machineID];
-		stringLi=stringLi+('<li data-ride="' + machineT.id + '"><a href="machineDetail.html?id='+machineT.id+'"><img src="img/machines/' + machineT.id + '.jpg" /></a><h3>' + machineT.id + ', ' + machineT.muscle + '</h3><p>' + machineT.smallDesc + '</p></li>');		
+		stringLi=stringLi+('<li data-ride="' + machineT.id + '"><a onclick="javascript:window.location.hash = id-'+machineT.id+';"><img src="img/machines/' + machineT.id + '.jpg" /></a><h3>' + machineT.id + ', ' + machineT.muscle + '</h3><p>' + machineT.smallDesc + '</p></li>');		
 		
 	} 
 	$('#machines-list-master').html(stringLi);
@@ -300,7 +305,7 @@ function loadListProgramme(nameProgramme){
 	for(var i in programsID) {
 		 
 		var programsID = programsID[i];
-		var progT = programs[programsID];
+		var progT = programs[programsID]; 
 		stringLi=stringLi+('<li class="divListli" id="divListli" name="divListli' + progT.id + '"><a href="machineDetail.html?id='+progT.id+'"><img id="divListimg" src="img/prgrams/100/' + progT.id + '.png" /><h3 id="divListh3" align="left">Code : '+ progT.id + '<br/>goal: ' + progT.goal +'</h3><p id="divListp"  align="left">Duration: ' + progT.duration + '</p></a></li><hr id="myHR" />');		
 		
 	} 
@@ -381,7 +386,29 @@ function populateFB() {
 
 }
 
-function goToProgramme(){
-		window.location.hash = "programmelist";
-}
 
+function hideMenu(){
+	 
+    $("#slideIndex").removeClass("open");
+	$("#slideIndex").addClass("close");
+	
+	$("#headerIndex").removeClass("open");
+	$("#headerIndex").addClass("close");
+	
+	$("#indexList").removeClass("open");
+	$("#indexList").addClass("close");
+	
+	
+	$("#navToggle").removeClass("close");
+	
+	 
+	$("#profilDiv").removeClass("open");
+	$("#profilDiv").addClass("close");
+	
+	
+	
+	$("#programmeListDiv").removeClass("open");
+	$("#programmeListDiv").addClass("close");
+	 
+	 
+}
