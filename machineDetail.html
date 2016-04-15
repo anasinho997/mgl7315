@@ -1,0 +1,112 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head> 
+ 
+<title>Machine - É-GYM</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1" media="(device-height: 568px)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="HandheldFriendly" content="True">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<!-- Style Sheets --> 
+<link rel="stylesheet" type="text/css" media="all" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/trunk.css" />
+
+<link rel="stylesheet" type="text/css" media="all" href="css/trunk.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/listView.css" />
+<link rel="stylesheet" type="text/css" media="all" href="lib/font-awesome-4.5.0/css/font-awesome.css" />
+<link rel="stylesheet" type="text/css" media="all" href="lib/font-awesome-4.5.0/css/font-awesome.min.css" /> 
+ 
+ 
+</head> 
+ 
+<body> 
+ 
+<div class="container">
+
+	<header class="slide">      
+		<ul id="navToggle" class="burger slide">   
+			<li></li><li></li><li></li>
+		</ul>
+		 
+			<img src="img/iconNoText.png" height="100%" class="imgLogo" />
+		 
+	</header>
+	 
+	<nav class="slide">
+		<ul>
+		
+			<li><a href="editProfil.html"> <i class="fa fa-user fa-fw fa-3x"></i>My Profil</a></li>
+			<li><a href="index.html"> <img src="img/icons/iconn.png" class="fa fa-fw fa-2x" /> Machines</a></li>
+			<li><a href="javascript:scanQRCode()"><i class="fa fa-qrcode fa-fw fa-3x"></i> Scan QR-Code</a></li>
+			<li><a href="#" onclick="window.open('mailto:egym@etsmtl.ca', '_system');"> <i class="fa fa-envelope fa-fw fa-3x"></i> Contact us</a></li>
+			<li><a href="#" onclick="window.open('https://www.facebook.com/%C3%89-GYM-979428002148538', '_system');"><i class="fa fa-facebook-official fa-fw fa-3x"></i> Like us</a></li>
+			 
+		</ul>
+	</nav>
+	
+	<table border="0" bgcolor="#f4f5f6">
+		<tr>
+			<td valign="top" width="100%" height="100%"  id="hideDIV">
+				
+				 
+					    <div id="divList" >
+						</div>
+				    
+			</td>
+			<td width="100%" height="100%" valign="top">
+			<div class="content slide" >      
+				<ul class="responsive">
+					<li class="body-section">
+						 <div class="containerForm">
+							<div align="center" id="machine-master">
+											
+							</div>
+							 
+						</div> 
+					</li>		 
+				</ul>
+			</div>
+			</td>
+		</tr>
+	</table>
+	
+	
+	
+</div>
+ 
+					
+				 
+
+
+		<!-- Scripts --> 
+		<script type="text/javascript">
+			if (typeof jQuery == 'undefined'){
+				document.write(unescape("%3Cscript src='lib/jquery/jquery-1.9.js'" + 
+																	"type='text/javascript'%3E%3C/script%3E"))
+											}
+		</script>
+		  	
+		<script type="text/javascript" language="javascript" src="js/trunk.js"></script>
+		<script type="text/javascript" src="js/model.js"></script>
+		<script type="text/javascript" src="lib/jquery/jquery.js"></script>
+		<script type="text/javascript" src="js/index.js"></script> 
+		<script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript">
+			 
+			 loadMachineInfos();
+			 loadMachines(); 
+			 loadList('divList'); 
+        </script>
+	
+    </body>
+</html>
+
+
+
+
+
+
+

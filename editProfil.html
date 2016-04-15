@@ -1,0 +1,140 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head> 
+ 
+<title>Edit Profil - É-GYM</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1" media="(device-height: 568px)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="HandheldFriendly" content="True">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<!-- Style Sheets --> 
+<link rel="stylesheet" type="text/css" media="all" href="css/reset.css" />
+
+<link rel="stylesheet" type="text/css" media="all" href="css/trunk.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/listView.css" />
+<link rel="stylesheet" type="text/css" media="all" href="lib/font-awesome-4.5.0/css/font-awesome.css" />
+<link rel="stylesheet" type="text/css" media="all" href="lib/font-awesome-4.5.0/css/font-awesome.min.css" /> 
+ 
+
+</head> 
+ 
+<body> 
+			<div id="deviceready" class="blink">
+				<p class="event listening"></p>
+                <p class="event received"></p>
+            </div>
+<div class="container">
+
+	<header class="slide">      
+		<ul id="navToggle" class="burger slide">   
+			<li></li><li></li><li></li>
+		</ul>
+		 
+			<img src="img/iconNoText.png" height="100%" class="imgLogo" />
+		 
+	</header>
+	 
+		<nav class="slide">
+			<ul>
+			
+				<li><a href="editProfil.html"> <i class="fa fa-user fa-fw fa-3x"></i>My Profil</a></li>
+				<li><a href="index.html"> <img src="img/icons/iconn.png" class="fa fa-fw fa-2x" /> Machines</a></li>
+				<li><a href="javascript:scanQRCode()"><i class="fa fa-qrcode fa-fw fa-3x"></i> Scan QR-Code</a></li>
+				<li><a href="#" onclick="window.open('mailto:egym@etsmtl.ca', '_system');"> <i class="fa fa-envelope fa-fw fa-3x"></i> Contact us</a></li>
+				<li><a href="#" onclick="window.open('https://www.facebook.com/%C3%89-GYM-979428002148538', '_system');"><i class="fa fa-facebook-official fa-fw fa-3x"></i> Like us</a></li>
+				 
+			</ul>
+		</nav>
+	 
+	<div class="content slide">      
+		<ul class="responsive">
+			 
+			<li id="body-sectionProfil" class="body-section">
+				 <div class="containerForm" >
+					<section id="content">
+					<button id="anasinho" onclick="anasinhho()">Click me</button>
+					<div class="info" id="facebook-login">
+							<h2><i class="fa fa-facebook-square fa-3x"></i> <span> Login with FB</span></h2>
+						</div>
+						<div class="info" id="facebook-data" style="display:none">
+							<h2><i class="fa fa-facebook-square fa-4x"></i> <span id="facebook-logout"> Logout</span><br><br><img id="facebook-picture"/>  </h2>
+						</div>
+						<form action="" id='myform'>						
+								<div align="center">
+								 
+								<div align="center">
+									 
+									 
+									<img id="fbPic" src="img/icons/defaultProfil.jpg" /><br/><br/>
+									<input type="radio" name="opinions" id="radio-1"  value="male" checked="checked" /><img src="img/icons/male.png" />
+									<input type="radio" name="opinions" id="radio-2"  value="female" /><img src="img/icons/female.png" />	 			 
+									<br/><br/>
+								</div>
+								<div align="center">
+									<input type="text" placeholder="First name" required="" id="firstName" />
+								</div>
+								<div align="center">
+									<input type="text" placeholder="Last name"  required="" id="lastName" />
+								</div>
+								<div align="center">
+									<input type="date" id="birthday" min="1920-12-31" max="1999-12-31" value="1999-12-31" />
+								</div>
+								<div align="center">
+									<input placeholder="Weight" type="text"  required="" id="weightPoid" disabled />
+								</div>
+								<div align="center">
+									<input type='range' id='RangeWeight' class='tip' min="30" max="200" value='40' oninput="RangeOnChangeWeight()" onchange="RangeOnChangeWeight()">  
+								</div>
+								<div align="center">
+									<input placeholder="Height" type="text" required="" id="HeightTaille" disabled /> 
+								</div>
+								<div align="center">
+									<input type='range' id='RangeHeight' class='tip' min="100" max="230" value='40' oninput="RangeOnChangeHeight()" onchange="RangeOnChangeHeight()">  
+								</div> 
+									<div align="center">
+										<input type="submit" onclick="saveProfil()" class="myButton" value="Update" />
+									</div>
+									
+								</div>
+								 
+					</div>
+								
+						</form> 
+					</section>  				
+				</div>    
+				
+			</li>
+			   
+		</ul>
+	</div>
+	
+</div>
+ 
+		<!-- Scripts --> 
+		<script type="text/javascript">
+			if (typeof jQuery == 'undefined'){
+				document.write(unescape("%3Cscript src='lib/jquery/jquery-1.9.js'" + 
+																	"type='text/javascript'%3E%3C/script%3E"))
+											}
+		</script>
+		<script type="text/javascript" language="javascript" src="js/trunk.js"></script>
+		<script type="text/javascript" src="lib/jquery/jquery.js"></script>
+		<script type="text/javascript" src="js/index.js"></script> 
+		<script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript">
+			 app.initialize();
+			 fillFields();
+        </script>
+	
+    </body>
+</html>
+
+
+
+
+
+
+

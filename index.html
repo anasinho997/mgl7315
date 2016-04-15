@@ -1,0 +1,223 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head> 
+ 
+<title>Index - É-GYM</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1" media="(device-height: 568px)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="HandheldFriendly" content="True">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<!-- Style Sheets --> 
+<link rel="stylesheet" type="text/css" media="all" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/trunk.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/listView.css" />
+<link rel="stylesheet" type="text/css" media="all" href="lib/font-awesome-4.5.0/css/font-awesome.css" />
+<link rel="stylesheet" type="text/css" media="all" href="lib/font-awesome-4.5.0/css/font-awesome.min.css" /> 
+
+
+
+</head> 
+ 
+<body> 
+			<div id="deviceready" class="blink">
+				<p class="event listening"></p>
+                <p class="event received"></p>
+            </div>
+			 
+<div class="container">
+
+	<header class="slide" id="headerIndex">     
+		<ul id="navToggle" class="burger slide">     
+			<li></li><li></li><li></li>
+		</ul>
+		 
+			<img src="img/iconNoText.png" height="100%" class="imgLogo" />
+		 
+	</header>
+	 
+	<nav class="slide" id="slideIndex">
+		<ul>
+		
+			<li><a onclick="javascript:window.location.hash = 'profil';"> <i class="fa fa-user fa-fw fa-3x"></i>My Profil</a></li>
+			<li><a onclick="javascript:window.location.hash = 'index';"> <img src="img/icons/iconn.png" class="fa fa-fw fa-2x" /> Machines</a></li>
+			<li><a href="javascript:scanQRCode()"><i class="fa fa-qrcode fa-fw fa-3x"></i> Scan QR-Code</a></li>
+			<li><a onclick="javascript:window.location.hash = 'programmelist';"><i class="fa fa-calendar-check-o fa-3x"></i></i> Programs</a></li>
+			<li><a href="#" onclick="window.open('mailto:egym@etsmtl.ca', '_system');"> <i class="fa fa-envelope fa-fw fa-3x"></i> Contact us</a></li>
+			<li><a href="#" onclick="window.open('https://www.facebook.com/%C3%89-GYM-979428002148538', '_system');"><i class="fa fa-facebook-official fa-fw fa-3x"></i> Like us</a></li>
+			 
+		</ul>
+	</nav> 
+	 
+	<div class="content slide" id="indexList"  >      
+		<ul class="responsive">
+			 
+			<li class="body-section" >
+				<ul class="rig columns-2" id="machines-list-master">
+				  
+				</ul>
+				
+				<div id="divListIndex" align="center" width="100%">
+				 
+				  
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="programme content slide" id="programmeListDiv">
+	 		<ul class="responsive">
+			 
+				<li class="body-section" id="body-sectionProg">
+					<table border="0" bgcolor="#f4f5f6">
+					<tr>
+						<td valign="top" width="30%" height="100%"  id="ProgrammehideDIV">
+							<div id="ProgrammedivList" >
+								list
+							</div>								
+						</td>
+						<td width="70%" height="100%" valign="top">
+						 	<div align="center" id="programme-master">
+														detail
+							</div> 
+						</td>
+					</tr>
+					</table>
+				</li>
+			</ul>
+	 
+	</div>
+	
+	
+	<div class="profil content slide" id="profilDiv">
+			<ul class="responsive">
+				<li id="body-sectionProfil" class="body-section" >
+					<div class="containerForm" >
+					<section id="content">
+						
+									
+						<div class="info" id="facebook-login"> 
+							<img id="fbPic" src="img/icons/defaultProfil.jpg" />
+							<h2><i class="fa fa-facebook-square fa-1x"></i> <span> Login </span></h2>
+						</div>
+						<div class="info" id="facebook-data" style="display:none">
+							<img id="fbPic" src="img/icons/defaultProfil.jpg" />
+							<h2><i class="fa fa-facebook-square fa-1x"></i> <span id="facebook-logout"> Logout</span><br><br><img id="facebook-picture"/>  </h2>
+						</div>
+						<form action="" id='myform'>						
+								<div align="center">
+								 
+								<div align="center">
+									<input type="radio" name="opinions" id="radio-1"  value="male" checked="checked" /><img src="img/icons/male.png" />
+									<input type="radio" name="opinions" id="radio-2"  value="female" /><img src="img/icons/female.png" />	 			 
+									<br/><br/>
+								</div>
+								<div align="center">
+									<input type="text" placeholder="First name" required="" id="firstName" />
+								</div>
+								<div align="center">
+									<input type="text" placeholder="Last name"  required="" id="lastName" />
+								</div>
+								<div align="center">
+									<input type="date" id="birthday" min="1920-12-31" max="1999-12-31" value="1999-12-31" />
+								</div>
+								<div align="center">
+									<input placeholder="Weight" type="text"  required="" id="weightPoid" disabled />
+								</div>
+								<div align="center">
+									<input type='range' id='RangeWeight' class='tip' min="30" max="200" value='40' oninput="RangeOnChangeWeight()" onchange="RangeOnChangeWeight()">  
+								</div>
+								<div align="center">
+									<input placeholder="Height" type="text" required="" id="HeightTaille" disabled /> 
+								</div>
+								<div align="center">
+									<input type='range' id='RangeHeight' class='tip' min="100" max="230" value='40' oninput="RangeOnChangeHeight()" onchange="RangeOnChangeHeight()">  
+								</div> 
+									<div align="center">
+										<input type="submit" onclick="saveProfil()" class="myButton" value="Update" />
+									</div>
+									
+								</div>
+						</form> 
+						
+					</section>  
+					</div>
+				</li>
+			</ul> 
+	</div>
+	
+	<div class="profil content slide" id="detailMachine">
+	<table border="0" bgcolor="#f4f5f6">
+		<tr>
+			<td valign="top" width="100%" height="100%"  id="hideDIV">
+				
+						
+					    <div id="divList" >
+						</div>
+				    
+			</td>
+			<td width="100%" height="100%" valign="top">
+			<div class="content slide" >      
+				<ul class="responsive">
+					<li class="body-section">
+						 <div class="containerForm">
+							<div align="center" id="machine-master">
+											
+							</div>
+							 
+						</div> 
+					</li>		 
+				</ul>
+			</div>
+			</td>
+		</tr>
+	</table>
+	</div>
+	
+</div>
+
+
+
+
+
+<!-- Scripts --> 
+
+		<script type="text/javascript">
+			if (typeof jQuery == 'undefined'){
+				document.write(unescape("%3Cscript src='lib/jquery/jquery-1.9.js'" + 
+																	"type='text/javascript'%3E%3C/script%3E"))
+											}
+		</script>
+		<script type="text/javascript" language="javascript" src="js/trunk.js"></script>
+		<script type="text/javascript" src="lib/jquery/jquery.js"></script>
+		<script type="text/javascript" src="js/model.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="lib/touch-swipe-1.6.15/jquery-touch-swipe.min.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+			fillFields();
+			checkProfil();
+			loadMachines();
+			loadList('divListIndex');
+			loadList('divList'); 
+			loadListProgramme('ProgrammedivList');
+			loadProgsInfos();
+			
+        </script>
+	
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
