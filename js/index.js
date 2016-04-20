@@ -45,7 +45,7 @@ var app = {
 		} else {
 			
 			initFB();
-		} 
+		}  
 		$('#indexList').show();
 		$('#programmeListDiv').hide();
 		$('#profilDiv').hide();
@@ -75,36 +75,36 @@ var app = {
 			$('#detailMachine').hide();
 			
 			}
+			 
 			else if(window.location.hash.substr(0,window.location.hash.indexOf("-")) == '#id'){
 			$('#indexList').hide();
 			$('#programmeListDiv').hide();
 			$('#profilDiv').hide();
 			$('#detailMachine').show();
 			loadMachineInfos(window.location.hash.substr(window.location.hash.indexOf("-")+1));
-			
 				
 			}
 			
 			try{
 					$(document).ready(function(){
-							document.getElementsById("divListimg").style.border = "medium solid #FF0000";
+							document.getElementsByName("divListli"+window.location.hash.substr(window.location.hash.indexOf("-")+1)).style.border = "medium solid #FF0000";
 					});
 
 				}
 				catch(err) {
-				  alert(err+"---"+window.location.hash.substr(window.location.hash.indexOf("-")+1));
+				  //alert(err+"---"+window.location.hash.substr(window.location.hash.indexOf("-")+1));
 				 }
 		}
 		
 		
 		//Hook a swipe left to come back from the list detail
-	$("#divList").swipe( {    
+	/*$("#divList").swipe( {    
 		
 		swipeRight:function(event, direction, distance, duration, fingerCount, fingerData) {
 		 window.location.hash = 'divList';
 		}
 		
-	});
+	});*/
 
     },
     // Update DOM on a Received Event
@@ -261,12 +261,14 @@ function scanQRCode(){
                 "Format: " + result.format + "\n" +
                 "Cancelled: " + result.cancelled);*/
 		if(result.cancelled){
-			window.location.hash == "indexMachineList";
+			window.location.hash = "indexMachineList";
 			
 		}
 		if(result.text.indexOf("-") > -1){
 			//window.location.replace("machineDetail.html?id="+result.text);
-			window.location.hash == "id-"+result.text;
+			 
+			window.location.hash = "id-"+result.text;
+			
 			}
 		if(!(result.text.indexOf("-") > -1)){
 				alert("QR code not recognized")
@@ -296,7 +298,7 @@ function loadMachines(){
 
 
 function loadMachineInfos(){
-	var myParam = location.search.split('?id=')[1];
+	var myParam = location.search.split("?id=")[1];
 	$('#machine-master').html(machines[myParam].desc);
 	
 }
@@ -312,20 +314,20 @@ function loadList(name){
 		 
 		var machineID = machinesID[i];
 		var machineT = machines[machineID];
-		stringLi=stringLi+('<li class="divListli" id="divListli" name="divListli' + machineT.id + '"><a onclick="javascript:window.location.hash =\'id-'+ machineT.id  +'\';"><img id="divListimg" src="img/machines/100/' + machineT.id + '.png" /><h3 id="divListh3" align="left">Code : '+ machineT.id + '<br/>Muscle: ' + machineT.muscle +'</h3><p id="divListp"  align="left">Name: ' + machineT.smallDesc + '</p><img id="divListimgN" width="10%" height="10%" src="img/machines/N' + machineT.lvl + '.png" /></a></li><hr id="myHR" />');		
+		stringLi=stringLi+('<li class="divListli" id="divListli" name="divListli' + machineT.id + '"><a onclick="javascript:window.location.hash =\'id-'+ machineT.id  +'\';"><img id="divListimg" src="img/machines/100/' + machineT.id + '.png" /><h3 id="divListh3" align="left">Code : '+ machineT.id + '<br/>Muscle: ' + machineT.muscle +'</h3><p id="divListp"  align="left">Name: ' + machineT.smallDesc + '</p><img id="divListimgN" style=”padding: 10px 10px 10px 10px;”  width="10%" height="10%" src="img/machines/N' + machineT.lvl + '.png" /></a></li><hr id="myHR" />');		
 		
 	} 
 	stringLi=stringLi+'</ul>';
 	$('#'+name).html(stringLi);
-	/*var myParam = window.location.hash.substr(window.location.hash.indexOf("-")+1);
-	
+	var myParam = window.location.hash.substr(window.location.hash.indexOf("-")+1);
+	 
 	//colorer le Li selectionne dans le mode tablette 
 	try{
 		document.getElementsByName("divListli"+myParam)[0].style.border = "medium solid #FF0000";
 	}
 	catch(err) {
       
-	 }*/
+	 }
 }
 
 function loadListProgramme(nameProgramme){
@@ -336,13 +338,14 @@ function loadListProgramme(nameProgramme){
 		 
 		var programsID = programsID[i];
 		var progT = programs[programsID]; 
-		stringLi=stringLi+('<li class="divListli" id="divListli" name="divListli' + progT.id + '"><a href="machineDetail.html?id='+progT.id+'"><img id="divListimg" src="img/prgrams/100/' + progT.id + '.png" /><h3 id="divListh3" align="left">Code : '+ progT.id + '<br/>goal: ' + progT.goal +'</h3><p id="divListp"  align="left">Duration: ' + progT.duration + '</p></a></li><hr id="myHR" />');		
+		stringLi=stringLi+('<li class="divListli" id="divListli" name="divListli' + progT.id + '"><a onclick="javascript:window.location.hash =\'idProg-'+ progT.id +'\';"><img id="divListimg" src="img/prgrams/100/' + progT.id + '.png" /><h3 id="divListh3" align="left">Code : '+ progT.id + '<br/>Name: ' + progT.name +'</h3><p id="divListp"  align="left">Duration: ' + progT.duration + '</p></a></li><hr id="myHR" />');		
 		
 	} 
 	stringLi=stringLi+'</ul>';
 	$('#'+nameProgramme).html(stringLi);
-	var myParam = location.search.split('?id=')[1];
+	var myParam = location.search.split("?id=")[1];
 	//colorer le Li selectionne dans le mode tablette  
+	
 	try{
 		document.getElementsByName("divListli"+myParam)[0].style.border = "medium solid #FF0000";
 	}
@@ -353,7 +356,7 @@ function loadListProgramme(nameProgramme){
 
 function loadProgsInfos(){
 	// to change id p1
-	var myParam = location.search.split('?id=')[1];
+	var myParam = location.search.split("?id=")[1];
 	$('#programme-master').html(programs['p1'].description);
 	
 }
@@ -364,7 +367,7 @@ function initFB(){
 	//Bind the login button
 	$('#facebook-login').click(function(){
 		facebookConnectPlugin.login(["public_profile"], populateFB, function(msg){
-			alert(msg);
+			 
 		});
 	});
 	
@@ -373,7 +376,7 @@ function initFB(){
 		facebookConnectPlugin.logout(function() {
 			$('#facebook-data').hide();
 			$('#facebook-login').show();
-			$('#fbPic').attr('src', "img/icons/defaultProfil.jpg");
+			$('#fbPic1').attr('src', "img/icons/defaultProfil.jpg");
 		}, function(msg){
 			alert(msg);
 		});
@@ -387,7 +390,7 @@ function initFB(){
 		} else {
 			//Connect
 			facebookConnectPlugin.login(["public_profile"], populateFB, function(msg){
-				alert(msg);
+				 
 			});
 		}
 	}, function(msg){
@@ -399,19 +402,20 @@ function populateFB() {
 	//Fetch the name
 	facebookConnectPlugin.api("/me", ["public_profile"], function(data){
 		$('#facebook-name').html(data.name);
-		$('#firstName').val(data.name.substr(0,data.name.indexOf(" ")));
-		$('#lastName').val(data.name.substr(data.name.indexOf(" ")));
+		$('#firstName').val(data.name);
+		//$('#lastName').val(data.name.substr(data.name.indexOf(' ')));
 		//Fetch the picture
 		facebookConnectPlugin.api("/me/picture?redirect=false", ["public_profile"], function(ret){
 			 
-			$('#fbPic').attr('src', ret.data.url);
+			 
+			$('#fbPic2').attr('src', ret.data.url);
 			$('#facebook-data').show();
 			$('#facebook-login').hide();
 		}, function(msg){		
-			alert(msg);
+			 
 		});
 	}, function(msg){		
-		alert(msg);
+		 
 	});
 
 }
@@ -429,11 +433,15 @@ function hideMenu(){
 	$("#indexList").addClass("close");
 	
 	
-	$("#navToggle").removeClass("close");
-	
+	$("#navToggle").removeClass("open");
+	$("#navToggle").addClass("close");
 	 
 	$("#profilDiv").removeClass("open");
 	$("#profilDiv").addClass("close");
+	
+	$("#detailMachine").removeClass("open");
+	$("#detailMachine").addClass("close");
+	
 	
 	
 	

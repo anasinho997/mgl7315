@@ -1,3 +1,81 @@
+.myBleu{
+	color: #388E8E;
+}
+.CSSTableGenerator {
+	margin:0px;padding:0px;
+	width:100%;
+	 
+	
+	-moz-border-radius-bottomleft:0px;
+	-webkit-border-bottom-left-radius:0px;
+	border-bottom-left-radius:0px;
+	
+	-moz-border-radius-bottomright:0px;
+	-webkit-border-bottom-right-radius:0px;
+	border-bottom-right-radius:0px;
+	
+	-moz-border-radius-topright:0px;
+	-webkit-border-top-right-radius:0px;
+	border-top-right-radius:0px;
+	
+	-moz-border-radius-topleft:0px;
+	-webkit-border-top-left-radius:0px;
+	border-top-left-radius:0px;
+}.CSSTableGenerator table{
+    
+        border-spacing: 0;
+	width:100%;
+	height:100%;
+	margin:0px;padding:0px;
+}.CSSTableGenerator tr:last-child td:last-child {
+	-moz-border-radius-bottomright:0px;
+	-webkit-border-bottom-right-radius:0px;
+	border-bottom-right-radius:0px;
+}
+.CSSTableGenerator table tr:first-child td:first-child {
+	-moz-border-radius-topleft:0px;
+	-webkit-border-top-left-radius:0px;
+	border-top-left-radius:0px;
+}
+.CSSTableGenerator table tr:first-child td:last-child {
+	-moz-border-radius-topright:0px;
+	-webkit-border-top-right-radius:0px;
+	border-top-right-radius:0px;
+}.CSSTableGenerator tr:last-child td:first-child{
+	-moz-border-radius-bottomleft:0px;
+	-webkit-border-bottom-left-radius:0px;
+	border-bottom-left-radius:0px;
+}.CSSTableGenerator tr:hover td{
+	
+}
+.CSSTableGenerator tr:nth-child(odd){ background-color:#e5e5e5; }
+.CSSTableGenerator tr:nth-child(even)    { background-color:#ffffff; }.CSSTableGenerator td{
+	vertical-align:middle;
+	
+	
+	 
+	text-align:center;
+	padding:7px;
+	font-size:15px;
+	font-family:Arial;
+	font-weight:normal;
+	color:#000000;
+}.CSSTableGenerator tr:last-child td{
+	 
+}.CSSTableGenerator tr td:last-child{
+	 
+}.CSSTableGenerator tr:last-child td:last-child{
+	 
+}
+ 
+.CSSTableGenerator tr:first-child td:first-child{
+	border-width:0px 0px 1px 0px;
+}
+.CSSTableGenerator tr:first-child td:last-child{
+	border-width:0px 0px 1px 1px;
+}
+
+
 a {
   color:inherit;
   text-decoration: none;
@@ -241,7 +319,7 @@ body {
 	background-color: #000;
 	
 	font: 12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	color: #9aa6af;
+	color: #000;
 	text-rendering: optimizelegibility;
 	
 	-webkit-tap-highlight-color:rgba(0,0,0,0);
@@ -336,6 +414,7 @@ nav li a:hover {color: #fff;}
 {padding-top: 50px; padding-bottom: 100%;}
 #body-sectionProg
 {padding-top: 50px; padding-bottom: 100%;}
+
 .header-section {background-color: #f4f5f6;}
 .body-section {background-color: #f4f5f6;}
 .footer-section {background-color: #f4f5f6	;}
@@ -358,7 +437,11 @@ nav li a:hover {color: #fff;}
 
 }
  
+#hideDIVProg{
 
+display: block;
+
+}
 #divListul {
   list-style-type: none;
   width: 300px; 
@@ -374,7 +457,7 @@ nav li a:hover {color: #fff;}
 }
 #divListimgN {
   float: right;
-  margin: -90px 40px 0 0;   
+  margin: -90px 5px 0 0;   
 }
 
 #divListp {
@@ -415,6 +498,11 @@ display: block;
 #hideDIV{
 
 display: none; 
+
+}
+#hideDIVProg{
+
+display: none;
 
 }
 #machines-list-master{

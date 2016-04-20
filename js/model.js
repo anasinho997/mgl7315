@@ -4,7 +4,7 @@ var machines = {
 		'lvl': 1, 
 		'muscle': 'Abs',
 		'smallDesc': 'Seated Crunch',
-		'desc': '<table style="width:100%" border="0" class="tableDetail" > <tr> <td colspan = "2" > <img src="img/machines/T/A-305.png" class="machineDetail" /> </td>   </tr><tr><td colspan = "2" valign="top" id="cssTable"><h3><br/>ID: <span id="muscleAndDiff">A-305, Seated Crunch</span><br/>Muscle: <span id="muscleAndDiff">Abs</span><br/><span id="muscleAndDiff"><br><hr> Instructions: </span><br/><br/> 1-Seat on a flat bench with your back facing a high pulley.<br/> 2- Grasp the cable rope attachment with both hands (with the palms of the hands facing each other) and place your hands securely over both shoulders. Tip: Allow the weight to hyperextend the lower back slightly. This will be your starting position. <br/> 3- With the hips stationary, flex the waist so the elbows travel toward the hips.<br/> 4- Breathe out as you perform this step. As you inhale, go back to the initial position slowly.</br>5- Repeat for the recommended amount of repetitions.</li> </ul><br/> <br/><b>Variation:</b> Exercise bands can be used for this exercise. </h3></td></tr> <tr> <td colspan = "2"><div class="video-container"><iframe  src="https://www.youtube.com/embed/zjbJpxdgVEI" frameborder="0" allowfullscreen></iframe></div></td>    </tr></table> ',
+		'desc': '<table style="width:100%" border="0" class="tableDetail" > <tr> <td colspan = "2" > <img src="img/machines/T/A-305.png" class="machineDetail" /> </td>   </tr><tr><td colspan = "2" valign="top" id="cssTable"><h3><br/>ID: <span id="muscleAndDiff">A-305, Seated Crunch</span><br/>Muscle: <span id="muscleAndDiff">Abs</span><br/><span id="muscleAndDiff"><br><hr> Instructions: </span><br/><br/> 1-Seat on a flat bench with your back facing a high pulley.<br/> 2- Grasp the cable rope attachment with both hands (with the palms of the hands facing each other) and place your hands securely over both shoulders. Tip: Allow the weight to hyperextend the lower back slightly. This will be your starting position. <br/></li> </ul><br/> <br/><b>Variation:</b> Exercise bands can be used for this exercise. </h3></td></tr> <tr> <td colspan = "2"><div class="video-container"><iframe  src="https://www.youtube.com/embed/zjbJpxdgVEI" frameborder="0" allowfullscreen></iframe></div></td>    </tr></table> ',
 	}, 
 	'C-401' : {
 		'id': 'C-401',
@@ -55,17 +55,17 @@ var programs ={
 	'p1' :{
 		'id':'p1',
 		'name':'Dry and weight Loss',
-		'goal': 'Alternate muscle and cardio workout to gradually reduce body fat without muscle wasting to get a super dry and muscular physique .',
+		'goal': 'Alternate muscle and cardio workout to gradually reduce body fat without muscle wasting to get a super dry and muscular physique.',
         'lvl': 'Beginner',
         'duration': '40 min',
       
-		'description': '<table style="width:100%"  border="1"><tr><h2>Dry and weight Loss<h2></tr><tr><h3>Goal :</h3><br/><p>Alternate muscle and cardio workout to gradually reduce body fat without muscle wasting to get a super dry and muscular physique .</p></tr> <tr><h3>duration:</h3> 4 weeks</tr><tr><h3>skill level:</h3>Beginner</tr></table>'
-
+		'description': '<table style="width:100%"  border="1"><tr><h2>Dry and weight Loss<h2></tr><tr><h3>Goal :</h3><br/><p>Alternate muscle and cardio workout to gradually reduce body fat without muscle wasting to get a super dry and muscular physique .</p></tr> <tr><h3>duration:</h3> 4 weeks</tr><tr><h3>skill level:</h3>Beginner</tr></table>',
+		'm1': 'A-305',
+		'm2': 'PE-157',
+		'm3': 'C-401'
 		
 	}
 	
 		
 }
 
-
-	

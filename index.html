@@ -15,10 +15,8 @@
 <link rel="stylesheet" type="text/css" media="all" href="css/trunk.css" />
 <link rel="stylesheet" type="text/css" media="all" href="css/listView.css" />
 <link rel="stylesheet" type="text/css" media="all" href="lib/font-awesome-4.5.0/css/font-awesome.css" />
-<link rel="stylesheet" type="text/css" media="all" href="lib/font-awesome-4.5.0/css/font-awesome.min.css" /> 
-
-
-
+<link rel="stylesheet" type="text/css" media="all" href="lib/font-awesome-4.5.0/css/font-awesome.min.css" />  
+ 
 </head> 
  
 <body> 
@@ -72,15 +70,76 @@
 				<li class="body-section" id="body-sectionProg">
 					<table border="0" bgcolor="#f4f5f6">
 					<tr>
-						<td valign="top" width="30%" height="100%"  id="ProgrammehideDIV">
-							<div id="ProgrammedivList" >
+						<td valign="top" width="30%" height="100%" >
+							<div id="ProgrammedivList" align="center">
 								list
 							</div>								
 						</td>
-						<td width="70%" height="100%" valign="top">
-						 	<div align="center" id="programme-master">
-														detail
-							</div> 
+						<td width="100%" height="100%" valign="top" id="hideDIVProg">
+						<br/><br/>
+							<div center><b><img src="img/prgrams/p1.png" width="100%" height="100%" height="100%"/></b></div>
+						 	<table border="0" width="100%" height="100%" valign="center" class="CSSTableGenerator">
+								
+								<tr>
+									<td valign="center" colspan="3">
+										Alternate muscle and cardio workout to gradually reduce body fat without muscle wasting to get a super dry and muscular physique.
+									</td>
+								</tr>
+								<tr>
+									<td width="33%">
+										<b>Duration:</b> 50 minutes
+									</td>
+									<td width="33%" colspan="2">
+										<b>Skill Level:</b> Beginner
+									</td>  
+								</tr>
+								<tr>
+									<td colspan="3">
+										<b>Program Planning</b>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="3">
+										 <b>1- Chest and Back</b> 
+									</td>
+								</tr>
+								<tr>
+									<td width="33%">
+										 <img src="img/machines/100/D-127.png"/> 
+									</td> 
+									<td width="66%">
+										 <a href="#"><p>Duration : 10 min</p>
+									</td>
+									
+								</tr>
+								<td valign="center" colspan="3">
+										<i  class="myBleu"><b>Rest</b></i>
+								</td>
+								<tr>
+									<td width="33%">
+										 <img src="img/machines/100/D-127.png"/> 
+									</td> 
+									<td width="66%">
+										 <a href="#"><p>Duration : 10 min</p>
+									</td>
+									
+								</tr>
+								<td valign="center" colspan="3">
+										<i class="myBleu"><b>Rest</b></i>
+								</td>
+								<tr>
+									<td width="33%">
+										 <img src="img/machines/100/C-108.png"/> 
+									</td> 
+									<td width="66%">
+										 <a href="#"><p>Duration : 10 min</p>
+									</td>
+									
+								</tr>
+								
+							</table>
+							
+							
 						</td>
 					</tr>
 					</table>
@@ -98,11 +157,11 @@
 						
 									
 						<div class="info" id="facebook-login"> 
-							<img id="fbPic" src="img/icons/defaultProfil.jpg" />
+							<img id="fbPic1" src="img/icons/defaultProfil.jpg" />
 							<h2><i class="fa fa-facebook-square fa-1x"></i> <span> Login </span></h2>
 						</div>
 						<div class="info" id="facebook-data" style="display:none">
-							<img id="fbPic" src="img/icons/defaultProfil.jpg" />
+							<img id="fbPic2" src="img/icons/defaultProfil.jpg" />
 							<h2><i class="fa fa-facebook-square fa-1x"></i> <span id="facebook-logout"> Logout</span><br><br><img id="facebook-picture"/>  </h2>
 						</div>
 						<form action="" id='myform'>						
@@ -117,7 +176,7 @@
 									<input type="text" placeholder="First name" required="" id="firstName" />
 								</div>
 								<div align="center">
-									<input type="text" placeholder="Last name"  required="" id="lastName" />
+									<input type="hidden" placeholder="Last name"  required="" id="lastName"  />
 								</div>
 								<div align="center">
 									<input type="date" id="birthday" min="1920-12-31" max="1999-12-31" value="1999-12-31" />
@@ -148,17 +207,14 @@
 	</div>
 	
 	<div class="profil content slide" id="detailMachine">
-	<table border="0" bgcolor="#f4f5f6">
+	<table border="0" bgcolor="#f4f5f6" height="100%">
 		<tr>
 			<td valign="top" width="100%" height="100%"  id="hideDIV">
-				
-						
 					    <div id="divList" >
 						</div>
-				    
 			</td>
 			<td width="100%" height="100%" valign="top">
-			<div class="content slide" >      
+			<div class="content slide body-section" >      
 				<ul class="responsive">
 					<li class="body-section">
 						 <div class="containerForm">
@@ -190,11 +246,10 @@
 											}
 		</script>
 		<script type="text/javascript" language="javascript" src="js/trunk.js"></script>
-		<script type="text/javascript" src="lib/jquery/jquery.js"></script>
+		<script type="text/javascript" src="lib/jquery/jquery.js"></script> 
 		<script type="text/javascript" src="js/model.js"></script>
 		<script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript" src="cordova.js"></script>
-		<script type="text/javascript" src="lib/touch-swipe-1.6.15/jquery-touch-swipe.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>  
         <script type="text/javascript">
             app.initialize();
 			fillFields();
@@ -203,7 +258,7 @@
 			loadList('divListIndex');
 			loadList('divList'); 
 			loadListProgramme('ProgrammedivList');
-			loadProgsInfos();
+			//loadProgsInfos();
 			
         </script>
 	
