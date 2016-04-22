@@ -253,7 +253,7 @@ function fillFields() {
  }
  
 function scanQRCode(){
-		
+	window.location.hash = 'index';
 	cordova.plugins.barcodeScanner.scan(
       function (result) {
        /*   alert("We got a barcode\n" +
@@ -422,7 +422,7 @@ function populateFB() {
 
 
 function hideMenu(){
-	 
+	$('.open').removeClass('open');
     $("#slideIndex").removeClass("open");
 	$("#slideIndex").addClass("close");
 	
@@ -441,9 +441,6 @@ function hideMenu(){
 	
 	$("#detailMachine").removeClass("open");
 	$("#detailMachine").addClass("close");
-	
-	
-	
 	
 	$("#programmeListDiv").removeClass("open");
 	$("#programmeListDiv").addClass("close");
