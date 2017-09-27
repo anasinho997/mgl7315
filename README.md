@@ -1,5 +1,5 @@
 # ÉGYM
-Download the app =>>>> https://www.sendspace.com/file/imvzgj
+Download the app (Android Version)=>>>> https://www.sendspace.com/file/imvzgj 
 
 
 ÉGYM application destinée à tous les adhérents du centre sportif de l’ETS.
