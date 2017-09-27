@@ -1,8 +1,8 @@
-# mgl7315
-Download the app =>>>>
+# ÉGYM
+Download the app =>>>> https://www.sendspace.com/file/imvzgj
 
 
-EGYM application destinée à tous les adhérents du centre sportif de l’ETS.
+ÉGYM application destinée à tous les adhérents du centre sportif de l’ETS.
 
 - Dispose des fonctionnalités:
 - Visualiser les machines disponibles+détails
